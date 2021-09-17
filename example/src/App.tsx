@@ -1,25 +1,36 @@
 import * as React from 'react';
 
 import { StyleSheet, View } from 'react-native';
-import NewCanvasViewManager from 'react-native-new-canvas';
+import NewCanvas from 'react-native-new-canvas';
 
 export default function App() {
+  const initCanvas = (canvas: any) => {
+    console.log('initCanvas canvas object');
+    console.log(canvas);
+  };
+
   return (
     <View style={styles.container}>
-      <NewCanvasViewManager color="#32a852" style={styles.box} />
+      <NewCanvas
+        color="yellow"
+        onCanvasCreate={initCanvas}
+        style={styles.box}
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  canvasContainer: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    height: '100%',
+    width: '100%',
   },
 });
