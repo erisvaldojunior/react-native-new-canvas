@@ -12,18 +12,6 @@ export default function App() {
       return;
     }
     canvasRef.current = canvas;
-
-    setTimeout(() => {
-      const context = canvasRef.current.getContext('2d');
-      context.strokeStyle = 'black';
-      context.lineJoin = 'round';
-      context.lineWidth = 50;
-      context.beginPath();
-      context.moveTo(40, 40);
-      context.lineTo(200, 150);
-      context.closePath();
-      context.stroke();
-    }, 3000);
   };
 
   const draw = (evt: any) => {
