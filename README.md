@@ -2,7 +2,9 @@
 
 Modern iOS/Android Native Canvas component for React Native (uses SwiftUI Canvas and Kotlin android.graphics.Canvas under the hood).
 
-It also has the same API of HTML ```<canvas>```, which is great for cross-platform projects (Android/iOS/Web) because they can use pretty much the same code just replacing ```<NewCanvas>``` for ```<canvas>``` on Web.
+It is designed to follow the same API of HTML ```<canvas>```, which is great for cross-platform projects (Android+iOS+Web) because they can use pretty much the same code just replacing ```<NewCanvas>``` for ```<canvas>``` on Web.
+
+Because it follows the web canvas API, you can find details of each API in https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 
 ## Installation
 
@@ -93,7 +95,15 @@ const styles = StyleSheet.create({
 
 ## API
 
-1. Context
+1. Canvas
+
+| API Name                 | API Type  | Status          |
+| ------------------------ | --------- | --------------- |
+| style                    | Attribute | Implemented     |
+| getContext()             | Method    | Implemented     |
+| getBoundingClientRect()  | Method    | Implemented     |
+
+2. Context
 
 | API Name                 | API Type  | Status          |
 | ------------------------ | --------- | --------------- |
