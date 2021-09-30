@@ -2,7 +2,7 @@
 
 Modern iOS/Android Native Canvas component for React Native (uses SwiftUI Canvas and Kotlin android.graphics.Canvas under the hood).
 
-It also has the same HTML Canvas API, which is great for cross-platform projects (Android/iOS/Web) because they can use pretty much the same code just replacing <NewCanvas> for <canvas> on Web.
+It also has the same HTML Canvas API, which is great for cross-platform projects (Android/iOS/Web) because they can use pretty much the same code just replacing ```<NewCanvas>``` for ```<canvas>``` on Web.
 
 ## Installation
 
