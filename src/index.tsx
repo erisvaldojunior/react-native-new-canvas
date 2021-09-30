@@ -36,7 +36,9 @@ const NewCanvas: React.FC<NewCanvasProps> = ({
 
   useEffect(() => {
     canvasRef.current = new Canvas(style);
-    onCanvasCreate(canvasRef.current);
+    if (onCanvasCreate) {      
+      onCanvasCreate(canvasRef.current);
+    }
   }, []);
 
   const panResponder = React.useRef(
