@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
 | getContext()             | Method    | Implemented     |
 | getBoundingClientRect()  | Method    | Implemented     |
 
-2. ContextRenderingContext2D
+2. CanvasRenderingContext2D
 
 | API Name                 | API Type  | Status          |
 | ------------------------ | --------- | --------------- |
