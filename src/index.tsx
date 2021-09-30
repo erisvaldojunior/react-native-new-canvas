@@ -7,7 +7,7 @@ import ReactNative, {
 import Canvas from './api/Canvas';
 
 type NewCanvasProps = {
-  onCanvasCreate: (canvas: Canvas) => void;
+  onCanvasCreate?: (canvas: Canvas) => void;
   onLayout?: (evt: any) => void;
   onTouchStart?: (evt: any) => void;
   onTouchMove?: (evt: any) => void;
