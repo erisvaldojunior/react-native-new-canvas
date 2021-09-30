@@ -13,6 +13,8 @@ npm install react-native-new-canvas
 ## Usage
 
 ```js
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
 import NewCanvas from 'react-native-new-canvas';
 
 export default function App() {
