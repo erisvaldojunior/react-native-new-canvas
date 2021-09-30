@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
 
 ## API
 
-1. Canvas
+1. CanvasElement
 
 | API Name                 | API Type  | Status          |
 | ------------------------ | --------- | --------------- |
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
 | getContext()             | Method    | Implemented     |
 | getBoundingClientRect()  | Method    | Implemented     |
 
-2. Context
+2. ContextRenderingContext2D
 
 | API Name                 | API Type  | Status          |
 | ------------------------ | --------- | --------------- |
@@ -144,7 +144,6 @@ const styles = StyleSheet.create({
 | drawImage()              | Method    | Not Implemented |
 | fill()                   | Method    | Not Implemented |
 | fillRect()               | Method    | Not Implemented |
-| getContext()             | Method    | Not Implemented |
 | getImageData()           | Method    | Not Implemented |
 | loadTexture()            | Method    | Not Implemented |
 | measureText()            | Method    | Not Implemented |
