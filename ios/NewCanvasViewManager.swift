@@ -5,8 +5,28 @@ class NewCanvasViewManager: RCTViewManager {
     return NewCanvasView()
   }
 
-  @objc func test(_ node:NSNumber) {
-    print("NewCanvasViewManager.swift NewCanvasViewManager class test func")
+  @objc func canvasSetStyle(_ node:NSNumber, width:NSNumber, height:NSNumber) {
+    print("NewCanvasViewManager.swift NewCanvasViewManager class canvasSetStyle func, width \(width) height \(height)")
+  }
+
+  @objc func contextBeginPath(_ node:NSNumber) {
+    print("NewCanvasViewManager.swift NewCanvasViewManager class contextBeginPath func")
+  }
+
+  @objc func contextClosePath(_ node:NSNumber) {
+    print("NewCanvasViewManager.swift NewCanvasViewManager class contextClosePath func")
+  }
+
+  @objc func contextLineTo(_ node:NSNumber, x:NSNumber, y:NSNumber) {
+    print("NewCanvasViewManager.swift NewCanvasViewManager class contextLineTo func, x \(x) y \(y)")
+  }
+
+  @objc func contextMoveTo(_ node:NSNumber, x:NSNumber, y:NSNumber) {
+    print("NewCanvasViewManager.swift NewCanvasViewManager class contextMoveTo func, x \(x) y \(y)")
+  }
+
+  @objc func contextStroke(_ node:NSNumber, contextAttributes:NSString) {
+    print("NewCanvasViewManager.swift NewCanvasViewManager class contextStroke func, contextAttributes \(contextAttributes)")
   }
 }
 

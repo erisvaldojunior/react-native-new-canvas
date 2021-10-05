@@ -17,13 +17,6 @@ class Canvas {
         UIManager.getViewManagerConfig('NewCanvasView').Commands.canvasSetStyle,
         [style.width, style.height]
       );
-      /*
-      UIManager.dispatchViewManagerCommand(
-        _handle,
-        UIManager.getViewManagerConfig('NewCanvasView').Commands.test,
-        []
-      );
-      */
     }
   }
 
