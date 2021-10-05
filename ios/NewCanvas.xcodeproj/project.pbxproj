@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A589A6E4270CE91300D22994 /* NewCanvasContext2d.swift in Sources */ = {isa = PBXBuildFile; fileRef = A589A6E3270CE81900D22994 /* NewCanvasContext2d.swift */; };
+		A589A6E5270CE91500D22994 /* NewCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A589A6E2270CE81900D22994 /* NewCanvasView.swift */; };
 		F4FF95D7245B92E800C19C63 /* NewCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FF95D6245B92E800C19C63 /* NewCanvas.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libNewCanvas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNewCanvas.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A589A6E2270CE81900D22994 /* NewCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCanvasView.swift; sourceTree = "<group>"; };
+		A589A6E3270CE81900D22994 /* NewCanvasContext2d.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCanvasContext2d.swift; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* NewCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewCanvas.m; sourceTree = "<group>"; };
 		F4FF95D5245B92E700C19C63 /* NewCanvas-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NewCanvas-Bridging-Header.h"; sourceTree = "<group>"; };
 		F4FF95D6245B92E800C19C63 /* NewCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCanvas.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				A589A6E3270CE81900D22994 /* NewCanvasContext2d.swift */,
+				A589A6E2270CE81900D22994 /* NewCanvasView.swift */,
 				F4FF95D6245B92E800C19C63 /* NewCanvas.swift */,
 				B3E7B5891CC2AC0600A0062D /* NewCanvas.m */,
 				F4FF95D5245B92E700C19C63 /* NewCanvas-Bridging-Header.h */,
@@ -115,6 +121,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A589A6E5270CE91500D22994 /* NewCanvasView.swift in Sources */,
+				A589A6E4270CE91300D22994 /* NewCanvasContext2d.swift in Sources */,
 				F4FF95D7245B92E800C19C63 /* NewCanvas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

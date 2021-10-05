@@ -1,12 +1,20 @@
 @objc(NewCanvasViewManager)
 class NewCanvasViewManager: RCTViewManager {
 
+  var newCanvasView: NewCanvasView!
+
+  override static func requiresMainQueueSetup() -> Bool {
+    return true
+  }
+
   override func view() -> (NewCanvasView) {
-    return NewCanvasView()
+    newCanvasView = NewCanvasView()
+    return newCanvasView
   }
 
   @objc func canvasSetStyle(_ node:NSNumber, width:NSNumber, height:NSNumber) {
     print("NewCanvasViewManager.swift NewCanvasViewManager class canvasSetStyle func, width \(width) height \(height)")
+    newCanvasView.canvasSetStyle(withWidth: width.intValue, withHeight: height.intValue)
   }
 
   @objc func contextBeginPath(_ node:NSNumber) {
@@ -27,30 +35,5 @@ class NewCanvasViewManager: RCTViewManager {
 
   @objc func contextStroke(_ node:NSNumber, contextAttributes:NSString) {
     print("NewCanvasViewManager.swift NewCanvasViewManager class contextStroke func, contextAttributes \(contextAttributes)")
-  }
-}
-
-class NewCanvasView : UIView {
-
-  @objc var color: String = "" {
-    didSet {
-      self.backgroundColor = hexStringToUIColor(hexColor: color)
-    }
-  }
-
-  func hexStringToUIColor(hexColor: String) -> UIColor {
-    let stringScanner = Scanner(string: hexColor)
-
-    if(hexColor.hasPrefix("#")) {
-      stringScanner.scanLocation = 1
-    }
-    var color: UInt32 = 0
-    stringScanner.scanHexInt32(&color)
-
-    let r = CGFloat(Int(color >> 16) & 0x000000FF)
-    let g = CGFloat(Int(color >> 8) & 0x000000FF)
-    let b = CGFloat(Int(color) & 0x000000FF)
-
-    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1)
   }
 }
