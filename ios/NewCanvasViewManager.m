@@ -4,4 +4,6 @@
 
 RCT_EXPORT_VIEW_PROPERTY(color, NSString)
 
+RCT_EXTERN_METHOD(test:(nonnull NSNumber *)node)
+
 @end

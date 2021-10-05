@@ -4,6 +4,10 @@ class NewCanvasViewManager: RCTViewManager {
   override func view() -> (NewCanvasView) {
     return NewCanvasView()
   }
+
+  @objc func test(_ node:NSNumber) {
+    print("NewCanvasViewManager.swift NewCanvasViewManager class test func")
+  }
 }
 
 class NewCanvasView : UIView {
