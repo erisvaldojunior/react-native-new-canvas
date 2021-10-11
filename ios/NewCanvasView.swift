@@ -10,7 +10,27 @@ class NewCanvasView : UIView {
   }
 
   func canvasSetStyle(withWidth width: Int, withHeight height: Int) {
-    print("NewCanvasView canvasSetStyle width \(width) height \(height)")
+    print("NewCanvasView.swift canvasSetStyle width \(width) height \(height)")
+  }
+
+  func contextBeginPath() {
+    print("NewCanvasView.swift contextBeginPath()")
+  }
+
+  func contextClosePath() {
+    print("NewCanvasView.swift contextClosePath()")
+  }
+
+  func contextLineTo(_ x: Float, _ y: Float) {
+    print("NewCanvasView.swift contextLineTo x \(x) y \(y)")
+  }
+
+  func contextMoveTo(_ x: Float, _ y: Float) {
+    print("NewCanvasView.swift contextMoveTo x \(x) y \(y)")
+  }
+
+  func contextStroke(withAttributes contextAttributes: String) {
+    print("NewCanvasView.swift stroke contextAttributes \(contextAttributes)")
   }
 
   func hexStringToUIColor(hexColor: String) -> UIColor {
