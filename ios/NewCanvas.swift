@@ -10,7 +10,7 @@ class NewCanvas {
         self.newCanvasView = newCanvasView
     }
 
-    func getContext(withType contextType: String) -> NewCanvasContext2d? {
+    func getContext(_ contextType: String) -> NewCanvasContext2d? {
         if (contextType == "2d") {
             if (context2d == nil) {
                 context2d = NewCanvasContext2d(newCanvas: self, newCanvasView: newCanvasView)

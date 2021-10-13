@@ -3,49 +3,62 @@ import UIKit
 
 class NewCanvasView : UIView {
 
-  @objc var color: String = "" {
-    didSet {
-      self.backgroundColor = hexStringToUIColor(hexColor: color)
-    }
-  }
+  private var newCanvas: NewCanvas!
 
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setupView()
+  }
+  
+  //initWithCode to init view from xib or storyboard
+  required init?(coder: NSCoder) {
+    super.init(coder: coder)
+    setupView()
+  }
+    
+  private func setupView() {
+    newCanvas = NewCanvas(newCanvasView: self)
+  }
+  
   func canvasSetStyle(withWidth width: Int, withHeight height: Int) {
-    print("NewCanvasView.swift canvasSetStyle width \(width) height \(height)")
+
   }
 
   func contextBeginPath() {
-    print("NewCanvasView.swift contextBeginPath()")
+    let context = newCanvas.getContext("2d")!
+    context.beginPath()
   }
 
   func contextClosePath() {
-    print("NewCanvasView.swift contextClosePath()")
+    let context = newCanvas.getContext("2d")!
+    context.closePath()
   }
 
   func contextLineTo(_ x: Float, _ y: Float) {
-    print("NewCanvasView.swift contextLineTo x \(x) y \(y)")
+    let context = newCanvas.getContext("2d")!
+    context.lineTo(x, y)
   }
 
   func contextMoveTo(_ x: Float, _ y: Float) {
-    print("NewCanvasView.swift contextMoveTo x \(x) y \(y)")
+    let context = newCanvas.getContext("2d")!
+    context.moveTo(x, y)
   }
 
   func contextStroke(withAttributes contextAttributes: String) {
     print("NewCanvasView.swift stroke contextAttributes \(contextAttributes)")
+    let context = newCanvas.getContext("2d")!
+    context.stroke(withAttributes: contextAttributes)
   }
 
-  func hexStringToUIColor(hexColor: String) -> UIColor {
-    let stringScanner = Scanner(string: hexColor)
+  override func draw(_ rect: CGRect) {
+    super.draw(rect)
 
-    if(hexColor.hasPrefix("#")) {
-      stringScanner.scanLocation = 1
+    let context = newCanvas.getContext("2d")
+    let paths = context?.paths
+
+    paths?.forEach { path in
+      path.stroke()
     }
-    var color: UInt32 = 0
-    stringScanner.scanHexInt32(&color)
-
-    let r = CGFloat(Int(color >> 16) & 0x000000FF)
-    let g = CGFloat(Int(color >> 8) & 0x000000FF)
-    let b = CGFloat(Int(color) & 0x000000FF)
-
-    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1)
   }
+
 }
