@@ -1,6 +1,9 @@
 # react-native-new-canvas
 
-Modern iOS/Android Native Canvas component for React Native (uses SwiftUI Canvas and Kotlin android.graphics.Canvas under the hood).
+Modern iOS/Android Native Canvas component for React Native.
+
+For iOS, uses Swift language and Core Graphics Framework.
+For Android, uses Kotlin language and Android Graphics Framework.
 
 It is designed to follow the same API of HTML ```<canvas>```, which is great for cross-platform projects (Android+iOS+Web) because they can use pretty much the same code just replacing ```<NewCanvas>``` for ```<canvas>``` on Web.
 
@@ -9,7 +12,7 @@ Because it follows the web canvas API, you can find details of each API in https
 ## Installation
 
 ```sh
-npm install react-native-new-canvas
+yarn add react-native-new-canvas
 ```
 
 ## Usage
