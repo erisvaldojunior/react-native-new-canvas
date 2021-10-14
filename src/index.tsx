@@ -26,17 +26,11 @@ const NewCanvas: React.FC<NewCanvasProps> = ({
   onTouchEnd,
   style,
 }: NewCanvasProps) => {
-  // Props parameters
-  const props = {
-    strokeWidth: 30,
-    user: null,
-  };
-
   let canvasRef = React.useRef<Canvas>();
 
   useEffect(() => {
     canvasRef.current = new Canvas(style);
-    if (onCanvasCreate) {      
+    if (onCanvasCreate) {
       onCanvasCreate(canvasRef.current);
     }
   }, []);
